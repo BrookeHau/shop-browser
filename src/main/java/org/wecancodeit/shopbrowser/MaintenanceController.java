@@ -6,4 +6,8 @@ package org.wecancodeit.shopbrowser;
 //the webpage
 public class MaintenanceController {
 
+	public Product createProduct(Product incoming) {
+		return null;
+	}
+
 }

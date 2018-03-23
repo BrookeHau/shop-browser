@@ -39,13 +39,13 @@ public class BrowseRestTest {
 		HttpStatus status = response.getStatusCode();
 		assertThat(status, is(HttpStatus.OK));
 	}
-	
+
 	@Test
 	public void createProduct() {
-		Product product = new Product("product");
-		ResponseEntity<Product> response = restTemplate.getForEntity("/products", Product.class);
-		//prior test was to verify the webpage was accessible
-		//this test is to ensure the body of the webpage is populated
+		Product product = new Product(" new product");
+		ResponseEntity<Product> response = restTemplate.postForEntity("/products", product, Product.class);
+		// prior test was to verify the webpage was accessible
+		// this test is to ensure the body of the webpage is populated
 		Product created = response.getBody();
 		assertThat(created.getId(), is(greaterThan(0L)));
 	}
