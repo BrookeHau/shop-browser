@@ -15,6 +15,8 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.data.repository.CrudRepository;
 
+
+//tests the repository to ensure it is returning products 
 public class ShoppingBrowseControllerTest {
 
 	@InjectMocks
