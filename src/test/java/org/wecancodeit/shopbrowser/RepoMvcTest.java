@@ -49,9 +49,11 @@ public class RepoMvcTest {
 	
 	//when someone searches a product that doesn't exist we
 	//want it to show a 404 error
+	//requires creating an if statement within controller
+	//to state if product does not exist do not return page
 	@Test 
 	public void shouldNotFindProduct() throws Exception {
-		mvc.perform(get("/products/2")).andExpect(status().isNotFound());
+		mvc.perform(get("/products/42")).andExpect(status().isNotFound());
 	}
 
 }
